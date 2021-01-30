@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameController : MonoBehaviour
 {
 	public CameraController Camera;
+	public PlayerController Player;
 
 	void Start()
     {
@@ -12,7 +13,7 @@ public class GameController : MonoBehaviour
     }
 
     void Update()
-    {
-		Camera.OnUpdate();
+	{
+		Player.OnUpdate();
 	}
 }
