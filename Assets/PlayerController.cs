@@ -21,8 +21,10 @@ public class PlayerController : MonoBehaviour
 		Orientation = transform.eulerAngles.y;
 	}
 
-	public void OnUpdate()
+	public void FixedUpdate()
 	{
+		Position = transform.position;
+
 		var forward = Input.GetAxis("Vertical");
 		var sideways = Input.GetAxis("Horizontal");
 

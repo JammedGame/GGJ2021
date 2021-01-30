@@ -14,6 +14,5 @@ public class GameController : MonoBehaviour
 
     void Update()
 	{
-		Player.OnUpdate();
 	}
 }
