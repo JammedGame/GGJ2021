@@ -18,7 +18,7 @@ MonoBehaviour:
   FieldOfView: 30
   KeyboardPanSpeed: 15
   KeyboardYawSpeed: 0
-  StartZoom: 80
-  MinZoom: 80
-  MaxZoom: 80
+  StartZoom: 100
+  MinZoom: 100
+  MaxZoom: 100
   ScrollWheelZoomSpeed: 0

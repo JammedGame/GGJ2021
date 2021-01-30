@@ -124,7 +124,7 @@ Material:
     - _CausticsScale2: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DepthBias: {r: 0.5, g: 0.25, b: 0, a: 1}
-    - _DepthGradientDeep: {r: 0.07490198, g: 0.63666666, b: 0.7490196, a: 1}
+    - _DepthGradientDeep: {r: 0.074509814, g: 0.5803922, b: 0.7490196, a: 1}
     - _DepthGradientShallow: {r: 1, g: 1, b: 1, a: 0.9490196}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Normal1Tile: {r: 20, g: 10, b: 0, a: 0}
