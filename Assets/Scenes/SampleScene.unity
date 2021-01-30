@@ -51,8 +51,8 @@ LightmapSettings:
     m_IndirectOutputScale: 1
     m_AlbedoBoost: 1
     m_EnvironmentLightingMode: 0
-    m_EnableBakedLightmaps: 1
-    m_EnableRealtimeLightmaps: 1
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
   m_LightmapEditorSettings:
     serializedVersion: 12
     m_Resolution: 2
@@ -380,7 +380,6 @@ Transform:
   - {fileID: 1305213127}
   - {fileID: 906442368}
   - {fileID: 648033111}
-  - {fileID: 385141552}
   - {fileID: 1604367920}
   - {fileID: 590661135}
   - {fileID: 2074705516}
@@ -629,11 +628,11 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 385141551}
   m_LocalRotation: {x: 0.3825995, y: -0.019348254, z: 0.008014309, w: 0.92367697}
-  m_LocalPosition: {x: 4.2, y: 50, z: 5}
+  m_LocalPosition: {x: 0, y: 50, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 237884494}
-  m_RootOrder: 3
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 45, y: -2.4, z: 0}
 --- !u!108 &385141553
 Light:
@@ -654,7 +653,7 @@ Light:
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
-    m_Resolution: -1
+    m_Resolution: 3
     m_CustomResolution: -1
     m_Strength: 1
     m_Bias: 0.05
@@ -940,7 +939,7 @@ Transform:
   m_LocalScale: {x: 21.027609, y: 11.24471, z: 39.731316}
   m_Children: []
   m_Father: {fileID: 237884494}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 23.793001, y: 398.48, z: 180.986}
 --- !u!23 &590661136
 MeshRenderer:
@@ -2447,7 +2446,7 @@ Transform:
   m_LocalScale: {x: 21.027609, y: 11.24471, z: 39.731316}
   m_Children: []
   m_Father: {fileID: 237884494}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 23.793001, y: 398.48, z: 180.986}
 --- !u!23 &1604367921
 MeshRenderer:
@@ -2690,7 +2689,7 @@ PrefabInstance:
     - target: {fileID: 7210224471727453681, guid: 2b0074bf7168c63418cf094e918a4764,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7210224471727453681, guid: 2b0074bf7168c63418cf094e918a4764,
         type: 3}
@@ -3068,7 +3067,7 @@ PrefabInstance:
     - target: {fileID: 7210224471727453681, guid: 2b0074bf7168c63418cf094e918a4764,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7210224471727453681, guid: 2b0074bf7168c63418cf094e918a4764,
         type: 3}
