@@ -84,8 +84,8 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
-    - _AlphaMaxDistance: 25
-    - _AlphaStart: 0.5
+    - _AlphaMaxDistance: 12
+    - _AlphaStart: 0.7
     - _BumpScale: 1
     - _Cutoff: 0.5
     - _DetailNormalMapScale: 1
@@ -93,7 +93,7 @@ Material:
     - _Float0: -0.4
     - _Float1: 1600.1
     - _Float2: 14.1
-    - _FoamMaxDepth: 0.64
+    - _FoamMaxDepth: 1
     - _FoamStrength: 1
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -101,22 +101,22 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _NormalIntensity: 0.3
-    - _NormalIntensity1: 1
+    - _NormalIntensity1: 0.933
     - _NormalIntensity2: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
-    - _ReflectionStrength: 0.25
+    - _ReflectionStrength: 0.4
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Tile1: 7.61
-    - _Tile2: 10
+    - _Tile1: 15
+    - _Tile2: 30
     - _UVSec: 0
     - _WaveSpeed1: 1
     - _WaveSpeed2: 1
     - _WavesSpeed: 0.27
-    - _WavesSpeed1: -0.015
-    - _WavesSpeed2: 0.01
+    - _WavesSpeed1: -0.03
+    - _WavesSpeed2: 0.02
     - _ZWrite: 1
     - __dirty: 0
     m_Colors:
@@ -124,7 +124,7 @@ Material:
     - _CausticsScale2: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _DepthBias: {r: 0.5, g: 0.25, b: 0, a: 1}
-    - _DepthGradientDeep: {r: 0, g: 0.41037732, b: 0.7075472, a: 1}
+    - _DepthGradientDeep: {r: 0.07490198, g: 0.63666666, b: 0.7490196, a: 1}
     - _DepthGradientShallow: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Normal1Tile: {r: 20, g: 10, b: 0, a: 0}
