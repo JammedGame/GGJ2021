@@ -8,8 +8,11 @@ public class Barrel : MonoBehaviour
 	const float minimumHoldingHeight = 10f;
 
 	public Rigidbody rigidBody;
+	public float floatingCenter;
 	public AnimationCurve forceOverY;
 	public AnimationCurve dragOverY;
+	public float AngularDragAboveWater = 0f;
+	public float AngularDragInWater = 1f;
 
 	Plane? currentDraggingPlane;
 
@@ -56,19 +59,19 @@ public class Barrel : MonoBehaviour
 		}
 
 		// code that adds force for water interaction.
-		var pos = transform.position;
-		if (pos.y < 0f)
+		var submersion = - floatingCenter - transform.position.y;
+		if (submersion > 0f)
 		{
-			var drag = dragOverY.Evaluate(-pos.y);
-			var force = new Vector3(0, forceOverY.Evaluate(-pos.y) - Physics.gravity.y, 0f);
+			var drag = dragOverY.Evaluate(submersion);
+			var force = new Vector3(0, forceOverY.Evaluate(submersion) - Physics.gravity.y, 0f);
             rigidBody.velocity *= drag;
 			rigidBody.AddForce(force * Time.fixedDeltaTime, ForceMode.VelocityChange);
-			rigidBody.angularDrag = 1f;
+			rigidBody.angularDrag = AngularDragInWater;
 		}
 		else
 		{
 			// no drag while we are in air
-			rigidBody.angularDrag = 0f;
+			rigidBody.angularDrag = AngularDragAboveWater;
 		}
 	}
 }
