@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3f580346399644bead6117db6bc37df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  calloutPanel: {fileID: 2592506117178966083}
   titleLabel: {fileID: 7778643065797064093}
 --- !u!1 &5179255172411379120
 GameObject:
