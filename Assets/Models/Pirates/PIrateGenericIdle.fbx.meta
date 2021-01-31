@@ -1,24 +1,57 @@
 fileFormatVersion: 2
-guid: ce11777a02425c54e8e6142304413275
+guid: 44f3f5ae71a14124aa1314676b10457e
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -135952331956449747
+    second: Main
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: ball
-    second: {fileID: 2100000, guid: de5b012e09640ec4bb9341e41a812124, type: 2}
+      name: Bling
+    second: {fileID: 2100000, guid: 60022e83fcde13c44bb9bab5a44beca2, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: leaves
-    second: {fileID: 2100000, guid: b62053094bdbdbb48b711f914913f813, type: 2}
+      name: Cloth
+    second: {fileID: 2100000, guid: cbc5ed4232b990840a0997832950efed, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: trunk
-    second: {fileID: 2100000, guid: 74b04cc7d111aec40bf8f17cd4739550, type: 2}
+      name: EyeBalls
+    second: {fileID: 2100000, guid: 2fe1359918c36604eb3d5378316ccdc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: EyeCenter
+    second: {fileID: 2100000, guid: 45ca8686d4f155e4daa9add9b7ef3f5e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Hair
+    second: {fileID: 2100000, guid: b51852a2aa771724c88f065319ab12d5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Jeans
+    second: {fileID: 2100000, guid: 7b74730cca0b81d45a19fb1c78d627e6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leather
+    second: {fileID: 2100000, guid: 61daef7c1bceae54bb91299c426d41a2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Lips
+    second: {fileID: 2100000, guid: 20d8242bb98c8184ea8987d000a82dd1, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Skin
+    second: {fileID: 2100000, guid: a3bc8712d54cbf348a3e4b17f72300fc, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0
@@ -49,7 +82,7 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.011
+    globalScale: 0.035
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
@@ -84,7 +117,7 @@ ModelImporter:
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
   referencedClips: []
-  importAnimation: 0
+  importAnimation: 1
   humanDescription:
     serializedVersion: 3
     human: []
@@ -96,7 +129,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.00010999999
+    globalScale: 0.00035
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
