@@ -40,7 +40,7 @@ public class CameraController : MonoBehaviour
 		var isOverShip = MouseIsOverShip();
 		foreach (var barrel in Barrel.AllBarrels.ToArray())
 		{
-			barrel.OnMouseRelease(isOverShip);
+			barrel.OnMouseRelease(isOverShip, Player);
 		}
 	}
 

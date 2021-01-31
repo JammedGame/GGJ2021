@@ -47,7 +47,7 @@ public class Barrel : MonoBehaviour
 		}
 	}
 
-	public void OnMouseRelease(bool isOverShip)
+	public void OnMouseRelease(bool isOverShip, PlayerController ship)
 	{
 		if (currentDraggingPlane != null)
 		{
@@ -56,13 +56,27 @@ public class Barrel : MonoBehaviour
 
 			if (isOverShip)
 			{
-				gameObject.SetActive(false);
+				OnRelease(ship);
 			}
 		}
 	}
 
+	public virtual void OnRelease(PlayerController ship)
+	{
+		var pivot = ship.BarrelCount % 2 == 0 ? ship.BarrelPivot1 : ship.BarrelPivot2;
+		transform.parent = pivot.transform;
+		transform.localPosition = Vector3.up * (ship.BarrelCount / 2) * 1.5f;
+		transform.localEulerAngles = default;
+		Destroy(rigidBody);
+		ship.BarrelCount++;
+
+	}
+
 	void FixedUpdate()
 	{
+		if (!rigidBody)
+			return;
+
 		if (currentDraggingPlane != null)
 		{
 			// we are dragging the barrel - find position and freeze rigidbody

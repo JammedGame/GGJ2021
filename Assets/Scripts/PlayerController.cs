@@ -11,6 +11,9 @@ public class PlayerController : MonoBehaviour
 	public float TurnSpeed;
 	public GameObject RotationPivot;
 	public Renderer[] HighlightRenderers;
+	public GameObject[] PiratePivots;
+	public Transform BarrelPivot1;
+	public Transform BarrelPivot2;
 
 	[Header("State")]
 	public float Orientation;
@@ -43,6 +46,8 @@ public class PlayerController : MonoBehaviour
 			}
 		}
 	}
+
+	public int BarrelCount { get; internal set; }
 
 	public void Start()
 	{
