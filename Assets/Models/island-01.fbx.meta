@@ -1,24 +1,14 @@
 fileFormatVersion: 2
-guid: 9fa923fd4b031c54aa8605ba2fec2b24
+guid: e6149830d7826bf41a38c9264bbab2d3
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: rocks
-    second: {fileID: 2100000, guid: d288cb8e4d368d34282999e5a098cf1f, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: sand
-    second: {fileID: 2100000, guid: 18835989308525042b9bd3874c37eb0c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
     materialSearch: 1
-    materialLocation: 0
+    materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
