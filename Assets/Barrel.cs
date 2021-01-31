@@ -60,9 +60,9 @@ public class Barrel : MonoBehaviour
 		if (pos.y < 0f)
 		{
 			var drag = dragOverY.Evaluate(-pos.y);
-			var force = forceOverY.Evaluate(-pos.y);
+			var force = new Vector3(0, forceOverY.Evaluate(-pos.y) - Physics.gravity.y, 0f);
             rigidBody.velocity *= drag;
-			rigidBody.AddForce(Vector3.up * Time.fixedDeltaTime * force, ForceMode.VelocityChange);
+			rigidBody.AddForce(force * Time.fixedDeltaTime, ForceMode.VelocityChange);
 			rigidBody.angularDrag = 1f;
 		}
 		else
