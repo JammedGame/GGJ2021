@@ -131,6 +131,7 @@
 				float3 reflectRay = reflect(waterNormal, inputRay);
 				float3 reflection = texCUBE( _Cubemap, reflectRay).rgb * _ReflectionStrength;
 				reflection = smoothstep(0, 1, reflection);
+				reflection = reflection < 0.5 ? 0 : 0.05;
 
 				half3 deepColor = saturate(_DepthGradientDeep.rgb);
 				half3 shallowColor = lerp(_DepthGradientDeep.rgb, _DepthGradientShallow.rgb, _DepthGradientShallow.a);
