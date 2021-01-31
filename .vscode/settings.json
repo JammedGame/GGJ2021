@@ -38,7 +38,6 @@
         "**/*.OBJ":true,
         "**/*.cubemap":true,
         "**/*.flare":true,
-        "**/*.mat":true,
         "**/*.meta":true,
         "build/":true,
         "Build/":true,

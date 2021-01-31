@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Barrel : MonoBehaviour
 {
+	public static readonly HashSet<Barrel> AllBarrels = new HashSet<Barrel>();
+
 	const float minimumHoldingHeight = 10f;
 
 	public Rigidbody rigidBody;
@@ -15,8 +17,19 @@ public class Barrel : MonoBehaviour
 	public float AngularDragInWater = 1f;
 
 	Plane? currentDraggingPlane;
+	public Vector3 CenterPosition => transform.position + Vector3.up * floatingCenter;
 
-	void OnMouseDown()
+	void OnEnable()
+	{
+		AllBarrels.Add(this);
+	}
+
+	void OnDisable()
+	{
+		AllBarrels.Remove(this);
+	}
+
+	public void OnMouseClick()
 	{
 		// if in water, add force up
 		if (transform.position.y < 1f)
@@ -34,27 +47,32 @@ public class Barrel : MonoBehaviour
 		}
 	}
 
+	public void OnMouseRelease(bool isOverShip)
+	{
+		if (currentDraggingPlane != null)
+		{
+			currentDraggingPlane = default;
+			rigidBody.useGravity = true;
+
+			if (isOverShip)
+			{
+				gameObject.SetActive(false);
+			}
+		}
+	}
+
 	void FixedUpdate()
 	{
 		if (currentDraggingPlane != null)
 		{
-			// if mouse is up, stop dragging
-			if (!Input.GetMouseButton(0))
+			// we are dragging the barrel - find position and freeze rigidbody
+			var screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+			if (currentDraggingPlane.Value.Raycast(screenRay, out float dist))
 			{
-				currentDraggingPlane = default;
-				rigidBody.useGravity = true;
-			}
-			else
-			{
-				// we are dragging the barrel - find position and freeze rigidbody
-				var screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-				if (currentDraggingPlane.Value.Raycast(screenRay, out float dist))
-				{
-					transform.position = screenRay.GetPoint(dist);
-					rigidBody.useGravity = false;
-					rigidBody.velocity = default;
-					rigidBody.angularVelocity = default;
-				}
+				transform.position = screenRay.GetPoint(dist);
+				rigidBody.useGravity = false;
+				rigidBody.velocity = default;
+				rigidBody.angularVelocity = default;
 			}
 		}
 

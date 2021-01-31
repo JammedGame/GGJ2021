@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -9,11 +10,39 @@ public class PlayerController : MonoBehaviour
 	public float Speed;
 	public float TurnSpeed;
 	public GameObject RotationPivot;
+	public Renderer[] HighlightRenderers;
 
 	[Header("State")]
 	public float Orientation;
 	public Vector3 Position;
 	public Vector3 Direction => Quaternion.Euler(0, Orientation, 0) * Vector3.forward;
+
+	private bool glowing;
+	public bool Glowing
+	{
+		get => glowing;
+		set
+		{
+			if (glowing != value)
+			{
+				glowing = value;
+				if (glowing)
+				{
+					var glowBlock = new MaterialPropertyBlock();
+					var glowColor = Color.white;
+					glowColor.r = glowColor.g = glowColor.b = 0.25f;
+					glowBlock.SetColor("_EmissionColor", glowColor);
+					foreach (var r in HighlightRenderers)
+						r.SetPropertyBlock(glowBlock);
+				}
+				else
+				{
+					foreach (var r in HighlightRenderers)
+						r.SetPropertyBlock(null);
+				}
+			}
+		}
+	}
 
 	public void Start()
 	{
