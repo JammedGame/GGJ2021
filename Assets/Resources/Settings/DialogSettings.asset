@@ -1,0 +1,463 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd9137a87d54d414d9d8f3c01fbad085, type: 3}
+  m_Name: DialogSettings
+  m_EditorClassIdentifier: 
+  dialogs:
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 0}
+    lines:
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: Hello? Anyone?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: Oh no.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: 'Better find th'' cap''n. '
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: HEEELP! I CAN NAH SWIM!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Alas, I meet me demise...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: You're on board Cap'n.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Yarr, so I am, uh...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Wha' th' flamin' heck happened last night?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Wha' kind o' storm was that?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: '''n where''s me God forsaken crew?'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
+      text: Dude, I be a ship, ye're expectin' too much.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Right then.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: I should find me Quartermaster.
+      condition:
+        pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: He's got all th' loot after all.
+      condition:
+        pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: Ahoy cap'n!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: Lovely mornin', ain't it?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: Rise 'n grind, am I right?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Get yer arse on this ship!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: Aye aye cap'n!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: Oh, 'ave ye seen th' Bard?
+      condition:
+        pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+      text: I be worried he may needs some... Maintenance.
+      condition:
+        pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: f2186cb050f364a91b8bd4c81770327e, type: 2}
+      text: Jus' let me die...
+      condition:
+        pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+      text: Wha... Wha' year be it?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+      text: I swear I be too ole fer this shite.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Wha's wrong wee scallywag?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Tell me wha' ye remember last about yesterday.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+      text: Ok we were havin' th' most epic party right?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+      text: '''n then th'' Cook left t'' get more booze.'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+      text: But I don't remember much aft that.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: '*sobbing*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Quit yer sobbin' 'n tell me wha' ye remember about last night!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Why's the rum gone?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Wha'?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Uh, I mean, I couldn't find nah more booze, cap'n.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: But her, cap'n, ye should 'ave seen her.
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Dancin' wit' her blades. 'twas beautiful 'n terrifyin'.
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Oh shite, we should find th' Master-at-arms, or she'll 'ave our heads.
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Thar ye be!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Uh, would ye rejoin us, madam?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: '*climbs onto the ship*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: What is your command? My blade thirsts.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Har har, yeah, I know right.
+      condition:
+        pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Ahoy, wha' be that creepy stuff ye always say?
+      condition:
+        pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: May your blade always be wet, and powder dry.
+      condition:
+        pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+      text: Ah yeh, she's back lads!
+      condition:
+        pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: Where is The Prisoner?
+      condition:
+        pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Yarr...
+      condition:
+        pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: He was kind o' odd.
+      condition:
+        pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Do we really needs t' find 'im?
+      condition:
+        pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: Yeah yeah, I be here, hold yer horses.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: '*murderous gaze*'
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: Ugh, you're all so predictable, now you'll say some shite like "I'll
+        skin you alive" or whatever.
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+      text: Next time you try to escape, I'll skin you alive.
+      condition:
+        pirate: {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+        op: 1
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Cut th' crap, prisoner.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Do ye know anythin' about wha' th' storm last night?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: Wha' storm? I jus' know I gave ye all some good party.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: You were being boring, so I spiked yer rums.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: '*very murderous gaze*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: Sooo anyway...
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: Where's whats-his-face, th' First mate?
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 15b1c9f22e3494e2eb3d69aac74f00ee, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+      text: The only one who gets any work done around here?
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Oh shite, th' First mate!
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Um, let's find 'im post haste!
+      condition:
+        pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+        op: 0
+  - isEpilogue: 0
+    triggerWhenFound: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+    lines:
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: F-in' finally, huh?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: Ye sure weren't in a hurry,
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: Took ye 5 hours 'n 20 minutes.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: Didn' feel like anyone was amiss, eh?
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: '*sweating*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Naaay, naaay.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Ye know ye're me favourite scallywag.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: '*not impressed*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Please, God, PLEASE, we are NOTHING without ye.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: '*sigh*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+  - isEpilogue: 1
+    triggerWhenFound: {fileID: 0}
+    lines:
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: Alright everyone, man the decks! Hoist the sails!
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: 15b1c9f22e3494e2eb3d69aac74f00ee, type: 2}
+      text: ...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: '*sigh*'
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
+      text: Just... Get out of my way, I'll do it.
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+      text: Yarr! Set sail for...
+      condition:
+        pirate: {fileID: 0}
+        op: 0
+    - pirate: {fileID: 0}
+      text: TO BE CONTINUED
+      condition:
+        pirate: {fileID: 0}
+        op: 0
