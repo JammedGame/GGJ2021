@@ -15,9 +15,12 @@ public class Barrel : MonoBehaviour
 	public AnimationCurve dragOverY;
 	public float AngularDragAboveWater = 0f;
 	public float AngularDragInWater = 1f;
+	public Vector3 DraggingOffset;
 
 	Plane? currentDraggingPlane;
 	public Vector3 CenterPosition => transform.position + Vector3.up * floatingCenter;
+	public bool IsBeingDragged => currentDraggingPlane != null;
+	public bool IsOnShip => rigidBody == null;
 
 	void OnEnable()
 	{
@@ -57,7 +60,7 @@ public class Barrel : MonoBehaviour
 
 	public void OnMouseRelease(bool isOverShip, PlayerController ship)
 	{
-		if (currentDraggingPlane != null)
+		if (currentDraggingPlane != null && rigidBody)
 		{
 			currentDraggingPlane = default;
 			rigidBody.useGravity = true;
@@ -90,7 +93,7 @@ public class Barrel : MonoBehaviour
 			var screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
 			if (currentDraggingPlane.Value.Raycast(screenRay, out float dist))
 			{
-				transform.position = screenRay.GetPoint(dist);
+				transform.position = screenRay.GetPoint(dist) + DraggingOffset;
 				rigidBody.useGravity = false;
 				rigidBody.velocity = default;
 				rigidBody.angularVelocity = default;

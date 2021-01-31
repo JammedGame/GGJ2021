@@ -27,7 +27,7 @@ public class CameraController : MonoBehaviour
 		}
 		else if (Input.GetMouseButton(0))
 		{
-			Player.Glowing = MouseIsOverShip();
+			Player.Glowing = MouseIsOverShip() && Barrel.AllBarrels.Any(x => x.IsBeingDragged);
 		}
 		else
 		{
@@ -59,6 +59,9 @@ public class CameraController : MonoBehaviour
 
 		foreach (var barrel in Barrel.AllBarrels)
 		{
+			if (!barrel.rigidBody)
+				continue;
+
 			var distSqr = Vector3.Cross(ray.direction, barrel.CenterPosition - ray.origin).sqrMagnitude;
 			if (distSqr < minDistanceSqr)
 			{

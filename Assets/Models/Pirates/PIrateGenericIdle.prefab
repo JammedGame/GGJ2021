@@ -987,8 +987,11 @@ MonoBehaviour:
     m_RotationOrder: 4
   AngularDragAboveWater: 2
   AngularDragInWater: 2
+  DraggingOffset: {x: 0, y: -2.5, z: 0}
   Index: 0
-  MinDistanceForCollecting: 25
+  MinDistanceForCollecting: 20
+  Animator: {fileID: 7508318869650494502}
+  Waving: 0
 --- !u!95 &7508318869650494502
 Animator:
   serializedVersion: 3
