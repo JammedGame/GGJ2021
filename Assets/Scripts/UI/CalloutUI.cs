@@ -13,6 +13,7 @@ namespace UI
 		private static CalloutUI _instance;
 
 		public RectTransform calloutPanel;
+		public TextMeshProUGUI nameLabel;
 		public TextMeshProUGUI titleLabel;
 
 		private void Start()
@@ -20,14 +21,16 @@ namespace UI
 			_instance = this;
 		}
 
-		public static void Show(string text)
+		public static IEnumerator Show(string pirateName, string pirateTitle)
 		{
-			_instance.titleLabel.text = text;
-			_instance.StartCoroutine(_instance.ShowFlow());
+			return _instance.ShowFlow(pirateName, pirateTitle);
 		}
 
-		private IEnumerator ShowFlow()
+		private IEnumerator ShowFlow(string pirateName, string pirateTitle)
 		{
+			nameLabel.text = pirateName;
+			titleLabel.text = pirateTitle;
+
 			var pos1 = -9999 * Vector3.right;
 			var pos2 = -50 * Vector3.right;
 			var pos3 = 50 * Vector3.right;
@@ -36,7 +39,7 @@ namespace UI
 			calloutPanel.gameObject.SetActive(true);
 
 			const float panTime = 1f;
-			const float waitTime = 4f;
+			const float waitTime = 5f;
 			var progress = 0f;
 			while (progress < 1f)
 			{
@@ -66,9 +69,9 @@ namespace UI
 
 #if UNITY_EDITOR
 		[MenuItem("Test/Callout")]
-		public static void Test()
+		private static void Test()
 		{
-			Show("Test");
+			_instance.StartCoroutine(Show("Test", "Test"));
 		}
 #endif
 	}

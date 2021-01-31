@@ -293,6 +293,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb0ce38fa12b246ada72c41fd1f80c81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  mainPanel: {fileID: 5955726242873906904}
   avatar: {fileID: 8929082881541659534}
   titleLabel: {fileID: 4316353700912524671}
   textLabel: {fileID: 1326534805866683292}

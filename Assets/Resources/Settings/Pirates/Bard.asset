@@ -14,4 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pirateName: Ivan
   title: The Bard
-  prefab: {fileID: 7849926020484354517, guid: c848f762598577640a6e55c3685cae74, type: 3}
+  prefab: {fileID: 919132149155446097, guid: 44f3f5ae71a14124aa1314676b10457e, type: 3}
+  avatarTransform:
+    position: {x: 15, y: -80, z: 0}
+    rotation: {x: 0, y: 145, z: 0}
+    scale: {x: 60, y: 60, z: 60}

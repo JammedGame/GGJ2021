@@ -12,6 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd9137a87d54d414d9d8f3c01fbad085, type: 3}
   m_Name: DialogSettings
   m_EditorClassIdentifier: 
+  piratesToFind:
+  - {fileID: 11400000, guid: c8131be6db22845c18bb9bd6693fc691, type: 2}
+  - {fileID: 11400000, guid: 937fe49d51b6d4f8f9976eeca0ca8fb1, type: 2}
+  - {fileID: 11400000, guid: 5cfa0faa99c9f4f02bbfc5b664744c34, type: 2}
+  - {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
+  - {fileID: 11400000, guid: 79d925b40e86e47e8aa83a838f8ce3fd, type: 2}
+  - {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
+  - {fileID: 11400000, guid: aced490e85a0d4779af1cac0841f5464, type: 2}
   dialogs:
   - isEpilogue: 0
     triggerWhenFound: {fileID: 0}
@@ -252,7 +260,7 @@ MonoBehaviour:
         pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
         op: 1
     - pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
-      text: Ahoy, wha' be that creepy stuff ye always say?
+      text: Ahoy, wha' be that other creepy stuff ye always say?
       condition:
         pirate: {fileID: 11400000, guid: 7b5ef67b86f2e4842919afcbe56b30f0, type: 2}
         op: 1
@@ -326,12 +334,12 @@ MonoBehaviour:
         pirate: {fileID: 0}
         op: 0
     - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
-      text: Wha' storm? I jus' know I gave ye all some good party.
+      text: Wha' storm? I jus' know I gave ye all a good party.
       condition:
         pirate: {fileID: 0}
         op: 0
     - pirate: {fileID: 11400000, guid: bbc3bee75f8994d789cba7c0833beecb, type: 2}
-      text: You were being boring, so I spiked yer rums.
+      text: You were being boring as always, so I spiked yer rums.
       condition:
         pirate: {fileID: 0}
         op: 0
@@ -456,7 +464,7 @@ MonoBehaviour:
       condition:
         pirate: {fileID: 0}
         op: 0
-    - pirate: {fileID: 0}
+    - pirate: {fileID: 11400000, guid: 15b1c9f22e3494e2eb3d69aac74f00ee, type: 2}
       text: TO BE CONTINUED
       condition:
         pirate: {fileID: 0}

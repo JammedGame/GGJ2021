@@ -7,6 +7,7 @@ namespace Settings
 	[CreateAssetMenu]
 	public class DialogSettings : ScriptableObject
 	{
+		public List<PirateSettings> piratesToFind;
 		public List<Dialog> dialogs;
 	}
 
