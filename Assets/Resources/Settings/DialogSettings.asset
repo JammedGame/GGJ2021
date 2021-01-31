@@ -63,7 +63,7 @@ MonoBehaviour:
         pirate: {fileID: 0}
         op: 0
     - pirate: {fileID: 11400000, guid: a922466302f5d4c129f0fe214d0591c3, type: 2}
-      text: You're on board Cap'n.
+      text: You're on board, Cap'n.
       condition:
         pirate: {fileID: 0}
         op: 0

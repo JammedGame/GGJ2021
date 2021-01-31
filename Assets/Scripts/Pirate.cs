@@ -1,9 +1,11 @@
 using System;
 using System.Collections;
+using Settings;
 using UnityEngine;
 
 public class Pirate : Barrel
 {
+	public PirateSettings Settings;
 	public int Index;
 	public float MinDistanceForCollecting = 10f;
 	public Animator Animator;
@@ -18,6 +20,7 @@ public class Pirate : Barrel
 		transform.localEulerAngles = default;
 		SetIdle();
 		Destroy(rigidBody);
+		DialogController.MarkPirateFound(Settings);
 	}
 
 	private void SetIdle() => Animator.SetInteger("State", 0);

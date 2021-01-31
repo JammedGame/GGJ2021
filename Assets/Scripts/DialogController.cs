@@ -28,7 +28,7 @@ public class DialogController : MonoBehaviour
 		TryStartNextDialog();
 	}
 
-	public static void FindPirate(PirateSettings pirate)
+	public static void MarkPirateFound(PirateSettings pirate)
 	{
 		_instance.StartCoroutine(_instance.FindPirateFlow(pirate));
 	}
@@ -75,7 +75,7 @@ public class DialogController : MonoBehaviour
 	{
 		remainingDialogs.Remove(dialog);
 		dialogInProgress = dialog;
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(0.5f);
 
 		foreach (var line in dialog.lines)
 		{

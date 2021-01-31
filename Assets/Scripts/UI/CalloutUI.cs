@@ -32,8 +32,8 @@ namespace UI
 			titleLabel.text = pirateTitle;
 
 			var pos1 = -9999 * Vector3.right;
-			var pos2 = -50 * Vector3.right;
-			var pos3 = 50 * Vector3.right;
+			var pos2 = -25 * Vector3.right;
+			var pos3 = 25 * Vector3.right;
 			var pos4 = 9999 * Vector3.right;
 			calloutPanel.localPosition = pos1;
 			calloutPanel.gameObject.SetActive(true);
