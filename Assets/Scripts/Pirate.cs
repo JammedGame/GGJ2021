@@ -35,7 +35,7 @@ public class Pirate : Barrel
 		}
 		else if (IsOnShip)
 			SetIdle();
-		else if (transform.position.y < 0.2f)
+		else if (transform.position.y < -floatingCenter + 0.25f)
 		{
 			SetSwiming();
 			flying = false;
