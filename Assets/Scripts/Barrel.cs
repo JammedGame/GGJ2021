@@ -29,7 +29,7 @@ public class Barrel : MonoBehaviour
 		AllBarrels.Remove(this);
 	}
 
-	public void OnMouseClick()
+	public virtual void OnMouseClick(PlayerController ship)
 	{
 		// if in water, add force up
 		if (transform.position.y < 1f)
@@ -39,7 +39,15 @@ public class Barrel : MonoBehaviour
 			rigidBody.angularVelocity = new Vector3(0, Random.Range(1f, 2f), 0f);
 		}
 		// if not in water and not dragging, start dragging
-		else if (currentDraggingPlane == null)
+		else
+		{
+			StartDragging();
+		}
+	}
+
+	public void StartDragging()
+	{
+		if (currentDraggingPlane == null)
 		{
 			var position = transform.position;
 			position.y = minimumHoldingHeight;
@@ -69,7 +77,6 @@ public class Barrel : MonoBehaviour
 		transform.localEulerAngles = default;
 		Destroy(rigidBody);
 		ship.BarrelCount++;
-
 	}
 
 	void FixedUpdate()

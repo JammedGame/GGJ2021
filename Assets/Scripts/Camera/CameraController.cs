@@ -68,7 +68,7 @@ public class CameraController : MonoBehaviour
 		}
 
 		if (closestBarrel != null)
-			closestBarrel.OnMouseClick();
+			closestBarrel.OnMouseClick(Player);
 	}
 
 	void LateUpdate()

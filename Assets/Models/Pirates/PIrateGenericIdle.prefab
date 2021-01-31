@@ -987,6 +987,8 @@ MonoBehaviour:
     m_RotationOrder: 4
   AngularDragAboveWater: 2
   AngularDragInWater: 2
+  Index: 0
+  MinDistanceForCollecting: 25
 --- !u!95 &7508318869650494502
 Animator:
   serializedVersion: 3
