@@ -7,6 +7,11 @@ public class CameraController : MonoBehaviour
 	public Camera Camera;
 	public PlayerController Player;
 
+	void Start()
+	{
+		Camera.depthTextureMode = DepthTextureMode.Depth;
+	}
+
 	void LateUpdate()
 	{
 		// update pivot transform.

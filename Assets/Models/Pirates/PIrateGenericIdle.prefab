@@ -869,6 +869,7 @@ GameObject:
   - component: {fileID: 6931571776533101418}
   - component: {fileID: 6931571776533101421}
   - component: {fileID: 4597724925906120923}
+  - component: {fileID: 7508318869650494502}
   m_Layer: 0
   m_Name: PIrateGenericIdle
   m_TagString: Untagged
@@ -901,8 +902,8 @@ Rigidbody:
   m_GameObject: {fileID: 7849926020484354517}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 2
-  m_AngularDrag: 1
+  m_Drag: 1
+  m_AngularDrag: 1.5
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -935,7 +936,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 6931571776533101418}
-  floatingCenter: 1.5
+  floatingCenter: 1.75
   forceOverY:
     serializedVersion: 2
     m_Curve:
@@ -986,6 +987,25 @@ MonoBehaviour:
     m_RotationOrder: 4
   AngularDragAboveWater: 2
   AngularDragInWater: 2
+--- !u!95 &7508318869650494502
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7849926020484354517}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16757b720ddab9248a86a0d5822edd9d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7856415276271880334
 GameObject:
   m_ObjectHideFlags: 0
