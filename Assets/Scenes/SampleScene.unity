@@ -1588,6 +1588,8 @@ MonoBehaviour:
   - {fileID: 315725186}
   - {fileID: 1977113156}
   - {fileID: 433809585}
+  - {fileID: 1746961862}
+  - {fileID: 1604651107}
   Orientation: 0
   Position: {x: 0, y: 0, z: 0}
 --- !u!136 &1098604897
@@ -2356,6 +2358,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1604367919}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1604651107 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -483053298501167332, guid: d69e609968ca00540aaeb98b424c8ec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 69356359}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1607426750
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2504,6 +2512,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7210224471727453681, guid: 2b0074bf7168c63418cf094e918a4764,
     type: 3}
   m_PrefabInstance: {fileID: 1609101875}
+  m_PrefabAsset: {fileID: 0}
+--- !u!23 &1746961862 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: -871056988765806356, guid: d69e609968ca00540aaeb98b424c8ec0,
+    type: 3}
+  m_PrefabInstance: {fileID: 69356359}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1872246232
 PrefabInstance:
