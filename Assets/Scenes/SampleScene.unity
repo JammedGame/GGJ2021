@@ -1608,7 +1608,7 @@ MonoBehaviour:
   Settings: {fileID: 11400000, guid: b1ebf9422b3b6f648a47290a491a9831, type: 2}
   Camera: {fileID: 381187418}
   Player: {fileID: 1098604896}
-  ShipRaycastRadius: 8
+  ShipRaycastRadius: 7
   ShipRaycastOffset: {x: 0, y: 4.5, z: 0}
 --- !u!4 &906442368 stripped
 Transform:

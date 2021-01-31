@@ -8,6 +8,7 @@ public class Pirate : Barrel
 	public float MinDistanceForCollecting = 10f;
 	public Animator Animator;
 	public bool Waving;
+	bool flying;
 
 	public override void OnRelease(PlayerController ship)
 	{
@@ -27,15 +28,29 @@ public class Pirate : Barrel
 	void Update()
 	{
 		if (IsBeingDragged)
+		{
 			SetStruggle();
+			LookTowards(Camera.main.transform.position);
+			flying = true;
+		}
 		else if (IsOnShip)
 			SetIdle();
+		else if (transform.position.y < 0.2f)
+		{
+			SetSwiming();
+			flying = false;
+		}
+		else if (flying)
+			SetStruggle();
 		else if (Waving)
 			SetWaving();
-		else if (transform.position.y < 0.2f)
-			SetSwiming();
 		else
 			SetIdle();
+	}
+
+	void OnCollisionEnter()
+	{
+		flying = false;
 	}
 
 	public override void OnMouseClick(PlayerController ship)
@@ -53,14 +68,21 @@ public class Pirate : Barrel
 
 	private IEnumerator LookAtMe(PlayerController ship)
 	{
-		while (!IsOnShip)
+		var time = Time.time + 2f;
+		while (!IsOnShip && Time.time < time)
 		{
-			var lookVector = ship.Position - transform.position;
-			lookVector.y = 0f;
-			var targetRot = Quaternion.LookRotation(lookVector);
-			transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, 180f * Time.deltaTime);
-
+			LookTowards(ship.Position);
 			yield return null;
 		}
+
+		Waving = false;
+	}
+
+	void LookTowards(Vector3 pos)
+	{
+		var lookVector = pos - transform.position;
+		lookVector.y = 0f;
+		var targetRot = Quaternion.LookRotation(lookVector);
+		transform.rotation = Quaternion.RotateTowards(transform.rotation, targetRot, 180f * Time.deltaTime);
 	}
 }
