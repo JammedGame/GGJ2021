@@ -5,47 +5,57 @@ using UnityEngine;
 
 public class Barrel : MonoBehaviour
 {
-	Rigidbody rigidBody => GetComponentInChildren<Rigidbody>();
+	const float minimumHoldingHeight = 10f;
 
+	public Rigidbody rigidBody;
 	public AnimationCurve forceOverY;
 	public AnimationCurve dragOverY;
 
-	Plane? holdPlane;
+	Plane? currentDraggingPlane;
 
 	void OnMouseDown()
 	{
+		// if in water, add force up
 		if (transform.position.y < 1f)
 		{
 			var force = new Vector3(Random.Range(-3f, 3f), 15f, Random.Range(-3f, 3f));
 			rigidBody.AddForce(force, ForceMode.Impulse);
+			rigidBody.angularVelocity = new Vector3(0, Random.Range(1f, 2f), 0f);
 		}
-		else if (holdPlane == null)
+		// if not in water and not dragging, start dragging
+		else if (currentDraggingPlane == null)
 		{
 			var position = transform.position;
-			position.y = Mathf.Max(10f, position.y);
-			holdPlane = new Plane(Vector3.up, position);
+			position.y = minimumHoldingHeight;
+			currentDraggingPlane = new Plane(Vector3.up, position);
 		}
 	}
 
 	void FixedUpdate()
 	{
-		if (!Input.GetMouseButton(0))
+		if (currentDraggingPlane != null)
 		{
-			holdPlane = default;
-		}
-
-		if (holdPlane is Plane planeForDragging)
-		{
-			var screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-			if (planeForDragging.Raycast(screenRay, out float dist))
+			// if mouse is up, stop dragging
+			if (!Input.GetMouseButton(0))
 			{
-				transform.position = screenRay.GetPoint(dist);
-				rigidBody.useGravity = false;
-				rigidBody.velocity = default;
+				currentDraggingPlane = default;
+				rigidBody.useGravity = true;
+			}
+			else
+			{
+				// we are dragging the barrel - find position and freeze rigidbody
+				var screenRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+				if (currentDraggingPlane.Value.Raycast(screenRay, out float dist))
+				{
+					transform.position = screenRay.GetPoint(dist);
+					rigidBody.useGravity = false;
+					rigidBody.velocity = default;
+					rigidBody.angularVelocity = default;
+				}
 			}
 		}
 
-		rigidBody.useGravity = true;
+		// code that adds force for water interaction.
 		var pos = transform.position;
 		if (pos.y < 0f)
 		{
@@ -53,6 +63,12 @@ public class Barrel : MonoBehaviour
 			var force = forceOverY.Evaluate(-pos.y);
             rigidBody.velocity *= drag;
 			rigidBody.AddForce(Vector3.up * Time.fixedDeltaTime * force, ForceMode.VelocityChange);
-        }
+			rigidBody.angularDrag = 1f;
+		}
+		else
+		{
+			// no drag while we are in air
+			rigidBody.angularDrag = 0f;
+		}
 	}
 }

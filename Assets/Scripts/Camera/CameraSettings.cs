@@ -17,6 +17,4 @@ public class CameraSettings : ScriptableObject
 
 	[Header("Zoom")]
 	public float StartZoom;
-	public float MinZoom, MaxZoom;
-	public float ScrollWheelZoomSpeed;
 }
