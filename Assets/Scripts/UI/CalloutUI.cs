@@ -71,7 +71,7 @@ namespace UI
 		[MenuItem("Test/Callout")]
 		private static void Test()
 		{
-			_instance.StartCoroutine(Show("Test", "Test"));
+			_instance.StartCoroutine(_instance.ShowFlow("Test", "Test"));
 		}
 #endif
 	}

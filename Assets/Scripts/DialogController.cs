@@ -14,7 +14,6 @@ public class DialogController : MonoBehaviour
 
 	public DialogSettings settings;
 
-	private readonly List<PirateSettings> piratesFound = new List<PirateSettings>();
 	private readonly List<PirateSettings> piratesToFind = new List<PirateSettings>();
 	private readonly List<Dialog> remainingDialogs = new List<Dialog>();
 	private Dialog dialogInProgress;
@@ -22,7 +21,6 @@ public class DialogController : MonoBehaviour
 	private void Start()
 	{
 		_instance = this;
-		piratesFound.Clear();
 		piratesToFind.AddRange(settings.piratesToFind);
 		remainingDialogs.AddRange(settings.dialogs);
 		TryStartNextDialog();
@@ -33,10 +31,14 @@ public class DialogController : MonoBehaviour
 		_instance.StartCoroutine(_instance.FindPirateFlow(pirate));
 	}
 
+	private bool IsPirateFound(PirateSettings pirate)
+	{
+		return !piratesToFind.Contains(pirate);
+	}
+
 	private IEnumerator FindPirateFlow(PirateSettings pirate)
 	{
 		piratesToFind.Remove(pirate);
-		piratesFound.Add(pirate);
 		yield return CalloutUI.Show(pirate.pirateName, pirate.title);
 
 		while (true)
@@ -60,7 +62,7 @@ public class DialogController : MonoBehaviour
 		}
 
 		var candidate = _instance.remainingDialogs.Find(d =>
-			(d.triggerWhenFound == null || _instance.piratesFound.Contains(d.triggerWhenFound)) &&
+			(d.triggerWhenFound == null || _instance.IsPirateFound(d.triggerWhenFound)) &&
 			(!d.isEpilogue || _instance.piratesToFind.Count == 0));
 		if (candidate == null)
 		{
@@ -81,8 +83,8 @@ public class DialogController : MonoBehaviour
 		{
 			var condition = line.condition;
 			var conditionMet = condition.pirate == null ||
-				condition.op == DialogConditionOperator.Found && piratesFound.Contains(condition.pirate) ||
-				condition.op == DialogConditionOperator.NotFound && !piratesFound.Contains(condition.pirate);
+				condition.op == DialogConditionOperator.Found && IsPirateFound(condition.pirate) ||
+				condition.op == DialogConditionOperator.NotFound && !IsPirateFound(condition.pirate);
 			if (conditionMet) yield return DialogUI.Show(line.pirate, line.text);
 		}
 
@@ -94,7 +96,6 @@ public class DialogController : MonoBehaviour
 	[MenuItem("Test/FindAllPirates")]
 	private static void FindAllPirates()
 	{
-		_instance.piratesFound.AddRange(_instance.piratesToFind);
 		_instance.piratesToFind.Clear();
 	}
 #endif
