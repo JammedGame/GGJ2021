@@ -59,10 +59,10 @@ public class PlayerController : MonoBehaviour
 	{
 		Position = transform.position;
 
-		var forward = Mathf.Abs(Input.GetAxis("Vertical"));
+		var forward = Input.GetAxis("Vertical");
 		var sideways = Input.GetAxis("Horizontal");
 
-		Orientation += sideways * Mathf.Sqrt(forward) * Time.deltaTime * TurnSpeed;
+		Orientation += sideways * Mathf.Sign(forward) * Mathf.Sqrt(Mathf.Abs(forward)) * Time.deltaTime * TurnSpeed;
 		Position += forward * Time.deltaTime * Speed * Direction;
 
 		transform.position = Position;
